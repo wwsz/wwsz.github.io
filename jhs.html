@@ -11,7 +11,7 @@ html{font-size:32px;}
 .wrap{width:10rem; margin:0 auto;overflow:hidden; }
 .wrap .title{height:1.5625rem; position:relative; background:-webkit-linear-gradient(#fff,#ebebeb);}
 .wrap .title a{ display:inline-block;width:2.03125rem;height:1rem; background:url(images/%E6%B7%98%E5%AE%9D.png) no-repeat;margin:0.375rem 0 0 0.375rem; background-size:100% 100%; text-indent:-99999px;}
-.wrap .title h1{ display:inline-block; width:2.3125rem; height:20px; background:url(images/logo.PNG) no-repeat; background-size:100% 100%; position:absolute;left:3.84375rem;top:0.5rem;}
+.wrap .title h1{ display:inline-block; width:2.3125rem; height:0.625rem; background:url(images/logo.PNG) no-repeat; background-size:100% 100%; position:absolute;left:3.84375rem;top:0.5rem;}
 .banner{width:100%;height:4.65625rem; position:relative;}
 .banner ul{width:999999rem;height:4.15625rem; position:absolute;left:0;top:0; overflow:hidden;}
 .banner ul li{width:10rem;height:100%; float:left;}
@@ -102,9 +102,13 @@ html{font-size:32px;}
 </style>
 
 <script>
-window.onresize=function(){
-	
+window.onresize=show;
+
+function show(){
 	document.documentElement.style.fontSize= 32/320*document.documentElement.clientWidth+'px';	
+}
+window.onload=function(){
+	show();	
 }
 </script>
 </head>
