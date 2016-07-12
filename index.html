@@ -50,9 +50,9 @@
 .team{ position:relative; margin-bottom:100px; text-align:center;width:80%;margin-left:10%;height:600px; }
 .team h2{ display:block;width:100%; font: bold 40px/40px "楷体"; color:#000; text-align:center;padding-top:30px;padding-bottom:30px;}
 .team p{ font:18px "楷体";}
-.team .max{width:60%; margin-left:20%;height:300px; background:url(images/team0.png) no-repeat; background-size:100% 100%;margin-bottom:10px;-webkit-transform:scale(1,1); position:relative; border-radius:30px;}
+.team .max{width:60%; margin-left:20%;height:300px; background:url(team0.png) no-repeat; background-size:100% 100%;margin-bottom:10px;-webkit-transform:scale(1,1); position:relative; border-radius:30px;}
 
-.team .min{width:60%; margin-left:20%;height:300px; background:url(images/team0.png) no-repeat; background-size:100% 100%;margin-bottom:10px;-webkit-transform:scale(1,-1);-webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 50%,rgba(0,0,0,0.5)); border-radius:30px;}
+.team .min{width:60%; margin-left:20%;height:300px; background:url(team0.png) no-repeat; background-size:100% 100%;margin-bottom:10px;-webkit-transform:scale(1,-1);-webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 50%,rgba(0,0,0,0.5)); border-radius:30px;}
 .team b{width:80px;height:40px; background:#0F0; color:#fff; position:absolute;left:50px;top:260px; border-radius:20px;font:bold 20px/40px "楷体"; cursor:pointer; box-shadow:inset 0px 0px 10px #fff,0px 10px 5px #000;text-shadow:2px 2px 5px #000;-webkit-transition:.3s all ease;}
 .team b:hover{box-shadow:inset 0px 0px 20px #fff,0px 10px 5px #000}
 .team b:active{top:270px;box-shadow:inset 0px 0px 0px #fff,0px 2px 5px #000;text-shadow:0px 0px 0px #000;}
@@ -116,9 +116,9 @@ window.onload=function(){
 	var oTeamMin=document.querySelector('.team .min');
 	var i=1;
 	oTeamB.onclick=function(){
-		oTeamMin.style.background='url(images/team'+i%3+'.png) no-repeat';
+		oTeamMin.style.background='url(team'+i%3+'.png) no-repeat';
 		oTeamMin.style.backgroundSize='100% 100%';
-		oTeamMax.style.background='url(images/team'+i%3+'.png) no-repeat';
+		oTeamMax.style.background='url(team'+i%3+'.png) no-repeat';
 		oTeamMax.style.backgroundSize='100% 100%';
 		i++;
 	}
@@ -170,21 +170,21 @@ window.onload=function(){
         <ul>
         	<li>
             	<a href="javascript:;">
-                	<img src="images/content3.png" />
+                	<img src="content3.png" />
                     <div></div>
                     <b>css&html 作品</b>
                 </a>
              </li>
              <li>
             	<a href="javascript:;">
-                	<img src="images/content7.png" />
+                	<img src="content7.png" />
                     <div></div>
                     <b>javascript 作品</b>
                 </a>
              </li>
              <li class="active">
             	<a href="javascript:;">
-                	<img src="images/content8.png" />
+                	<img src="content8.png" />
                     <div></div>
                     <b>css3&html5 作品</b>
                 </a>
