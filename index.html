@@ -3,83 +3,87 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>吴春锋</title>
-<link rel="icon" type="image/x-icon" href="icon2.png" media="screen" />
+<link rel="icon" type="image/x-icon" href="images/icon2.png" media="screen" />
 <link rel="stylesheet" href="base.css"/>
 <style>
-*{margin:0;padding:0; list-style:none; text-decoration:none;}
-
-.nav{ background:url(nav1.png) no-repeat; background-size:100% 100%; width:100%;height:365px; position:fixed; -webkit-transition:1s all ease; z-index:999;}
+.nav{ background:url(images/nav1.jpg) no-repeat;background-size:100% 100%; width:100%;height:365px; position:fixed; -webkit-transition:1s all ease; z-index:999;-ms-transition:1s all ease;}
 .nav .nav_list{width:100%; position:absolute;left:0;bottom:0;height:40px;}
 .nav .nav_list ul{width:100%; position:absolute;left:0;top:0;}
 .nav .nav_list ul li{width:20%; float:left;}
 .nav .nav_list ul li a{display:block; text-align:center;width:100%;  line-height:40px; color:#fff;font-size:18px; font-weight:bold; }
-.nav .nav_list ul li a:hover{ color:#CF0; font-size:26px; }
-.nvaScroll{width:100%;height:365px;-webkit-transition:1s all ease;}
+.nav .nav_list ul li a:hover{ color:#CF0; font-size:26px;}
+.nvaScroll{width:100%;height:365px;-webkit-transition:1s all ease; -ms-transition:1s all ease; background:#000;}
 
-.wrap{width:100%;-webkit-transition:1s all ease;}
+.wrap{width:100%;-webkit-transition:1s all ease;-ms-transition:1s all ease;}
 .head{width:100%;height:500px; position:relative;}
 .head h2{width:100%; font-size:40px; text-align:center;padding-top:100px;color:#9F0; font-weight:bold;padding-bottom:30px; font-family:"楷体";}
 .head .name{width:100%;height:180px; position:relative; }
 .head p{width:100%;text-align:center;color:#000;margin-bottom:10px; font: bold 20px "楷体"}
 .head h3{width:100%; font-size:30px; text-align:center;color:#9F0; font-weight:bold;font-family:"楷体";}
-.head i{width:75px;height:75px;; background:url(images/icon2.png) no-repeat; background-size:100% 100%; position:absolute;left:10%;top:10%; border-radius:50%;-webkit-transition:.3s all ease; -webkit-transform:perspective(800px) rotateY(0deg);}
-.head i:hover{-webkit-transform:perspective(800px) rotateY(360deg);}
+.head i{width:75px;height:75px;; background:url(images/icon2.png) no-repeat; background-size:100% 100%; position:absolute;left:10%;top:10%; border-radius:50%;-webkit-transition:.3s all ease; -webkit-transform:perspective(800px) rotateY(0deg);-ms-transition:.3s all ease; -ms-transform:perspective(800px) rotateY(0deg);}
+.head i:hover{-webkit-transform:perspective(800px) rotateY(360deg); -ms-transform:perspective(800px) rotateY(360deg);}
 .head i b{width:130px; position:absolute;left:-27px;top:75px; font:bold 25px/30px "楷体";}
-.head .name span{width:180px;height:180px; background:#9F0; position:absolute;left:50%;top:-15px;; font-size:20px; font-weight:bold; text-align:center; line-height:180px; border-radius:50%; margin-left:-100px; cursor:pointer; -webkit-transition:1s all ease; -webkit-transform:scale(1,1);font-family:"楷体";}
+.head .name span{width:180px;height:180px; background:#9F0; position:absolute;left:50%;top:-15px;; font-size:20px; font-weight:bold; text-align:center; line-height:180px; border-radius:50%; margin-left:-100px; cursor:pointer; -webkit-transition:1s all ease; -webkit-transform:scale(1,1);font-family:"楷体"; -ms-transition:1s all ease; -ms-transform:scale(1,1);}
 
-.head .name .name_list{width:0;height:100%; opacity:0;-webkit-transition:1s all ease; background:#0F0;border-radius:50px;}
+.head .name .name_list{width:0;height:100%; opacity:0;-webkit-transition:1s all ease; background:#0F0;border-radius:50px;-ms-transition:1s all ease;}
 
 .line1{width:90%;height:50px; background:#000;margin-left:5%;}
 
 .content{ position:relative; margin-bottom:100px;}
 .content p{ display:block;width:100%; font: bold 40px/40px "楷体"; color:#000; text-align:center;padding-top:30px;padding-bottom:30px;}
 .content ol{ position:absolute;left:0;top:90px;margin-left:150px;}
-.content ol li{font:bold 20px/50px "楷体";margin:40px;background:#9f0;width:200px; text-align:center; -webkit-transition:.5s all ease; box-shadow:inset 0px 0px 10px #fff,0px 5px 5px #000; border-radius:30px; cursor:pointer;}
+.content ol li{font:bold 20px/50px "楷体";margin:40px;background:#9f0;width:200px; text-align:center; -webkit-transition:.5s all ease;-ms-transition:.5s all ease; box-shadow:inset 0px 0px 10px #fff,0px 5px 5px #000; border-radius:30px; cursor:pointer;}
 .content ol li:hover{ box-shadow:inset 0px 0px 100px #fff,0px 5px 5px #000}
 .content ol li:active{box-shadow:inset 0px 0px 0px #fff,0px 2px 5px #000;}
-.content ul{ width:500px;height:300px;margin-left:450px;}
-.content ul li {width:500px; height:300px; display:none; }
-.content ul li.active{display:block; }
-.content ul li a{ display:block;width:100%;height:100%; border-radius:30px; border:1px solid #000; position:relative;  overflow:hidden; }
+.content ul{ width:500px;height:300px;margin-left:450px; position:relative; overflow:hidden;}
+.content ul li {width:500px; height:0px;position:absolute;left:0;top:0;-webkit-transition:.3s all ease;overflow:hidden;}
+.content ul li.active{height:300px;}
+.content ul li a{ display:block;width:100%;height:100%; border-radius:30px;  overflow:hidden; }
 .content ul li a img{ width:100%;height:100%;}
-.content ul li a div{width:100%; background:#000;height:0px; position:absolute;left:0;bottom:0px; border-radius:0 0 30px 30px; opacity:.3; -webkit-transition:.5s all ease;}
-.content ul li a b{width:100%; height:0px; position:absolute;left:0;bottom:0px; border-radius:0 0 30px 30px; color: #fff; text-align:center; font: bold 30px/70px "楷体";-webkit-transition:.5s all ease;}
+.content ul li a div{width:100%; background:#000;height:0px; position:absolute;left:0;bottom:0px; border-radius:0 0 30px 30px; opacity:.3; -webkit-transition:.5s all ease;-ms-transition:.5s all ease;}
+.content ul li a b{width:100%; height:0px; position:absolute;left:0;bottom:0px; border-radius:0 0 30px 30px; color: #fff; text-align:center; font: bold 30px/70px "楷体";-webkit-transition:.5s all ease;-ms-transition:.5s all ease;}
 .content ul li a:hover div{height:70px;}
 .content ul li a:hover b{height:70px;}
 
 .team{ position:relative; margin-bottom:100px; text-align:center;width:80%;margin-left:10%;height:600px; }
 .team h2{ display:block;width:100%; font: bold 40px/40px "楷体"; color:#000; text-align:center;padding-top:30px;padding-bottom:30px;}
 .team p{ font:18px "楷体";}
-.team .max{width:60%; margin-left:20%;height:300px; background:url(team0.png) no-repeat; background-size:100% 100%;margin-bottom:10px;-webkit-transform:scale(1,1); position:relative; border-radius:30px;}
+.team .max{width:60%; margin-left:20%;height:300px; background:url(images/team0.jpg) no-repeat; background-size:100% 100%;margin-bottom:10px;-webkit-transform:scale(1,1); position:relative; border-radius:30px; -ms-transform:scale(1,1);}
 
-.team .min{width:60%; margin-left:20%;height:300px; background:url(team0.png) no-repeat; background-size:100% 100%;margin-bottom:10px;-webkit-transform:scale(1,-1);-webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 50%,rgba(0,0,0,0.5)); border-radius:30px;}
-.team b{width:80px;height:40px; background:#0F0; color:#fff; position:absolute;left:50px;top:260px; border-radius:20px;font:bold 20px/40px "楷体"; cursor:pointer; box-shadow:inset 0px 0px 10px #fff,0px 10px 5px #000;text-shadow:2px 2px 5px #000;-webkit-transition:.3s all ease;}
+.team .min{width:60%; margin-left:20%;height:300px; background:url(images/team0.jpg) no-repeat; background-size:100% 100%;margin-bottom:10px;-webkit-transform:scale(1,-1); opacity:0.5;filter:alpha(opacity='50');-ms-transform:scale(1,-1);-webkit-mask:-webkit-linear-gradient(rgba(0,0,0,0) 40%,rgba(0,0,0,0.5));
+border-radius:30px; }
+
+.team b{width:80px;height:40px; background:#0F0; color:#fff; position:absolute;left:50px;top:260px; border-radius:20px;font:bold 20px/40px "楷体"; cursor:pointer; box-shadow:inset 0px 0px 10px #fff,0px 10px 5px #000;text-shadow:2px 2px 5px #000;-webkit-transition:.3s all ease;-ms-transition:.3s all ease;}
 .team b:hover{box-shadow:inset 0px 0px 20px #fff,0px 10px 5px #000}
 .team b:active{top:270px;box-shadow:inset 0px 0px 0px #fff,0px 2px 5px #000;text-shadow:0px 0px 0px #000;}
-.team i{width:20px; position:absolute; left:180px;top:180px; color:#0F0; font: bold 18px "楷体";height:0px; -webkit-transition:1s all ease; }
+.team i{width:20px; position:absolute; left:180px;top:180px; color:#0F0; font: bold 18px "楷体";height:0px; -webkit-transition:1s all ease; -ms-transition:1s all ease;}
 
-.line2{width:100%;height:50px; background:#000;color:#fff; text-align:right; font-size:16px; line-height:50px;}
-.line2 a{color:#fff;}
+.line2{width:100%;height:50px; background:#000;color:#fff; text-align:right; font-size:16px; line-height:50px;position:relative; }
+.line2 a{color:#fff; }
 </style>
 <script>
-function rnd(n,m){
-	return Math.floor(Math.random()*(m-n)+n);	
-}
 window.onload=function(){
+
 	var oNav=document.querySelector('.nav')	
 	var oNavSmall=document.querySelector('.nvaScroll');
 	var oNameList=document.querySelector('.name_list');	
 	var oNameSpan=document.querySelector('.name span');	
 	
-	console.log('我叫吴春锋，欢迎来到我的个人网站')
-	window.onscroll=function(){
+	
+	
+	
+	window.onscroll=function(ev){
 		var scrTop=document.documentElement.scrollTop||document.body.scrollTop;
 		if(scrTop>30){
 			oNav.style.height='50px';
 			oNavSmall.style.height='50px'
+			//move(oNav,{height:50},{time:90,type:'ease-in'});
+			//move(oNavSmall,{height:50},{time:90,type:'ease-in'});
 		}else{
 			oNav.style.height='365px';
 			oNavSmall.style.height='365px'
+			//move(oNav,{height:365},{time:90,type:'ease-in'});
+			//move(oNavSmall,{height:365},{time:90,type:'ease-in'});
 		}
 	}
 	oNameSpan.onclick=function(){
@@ -91,8 +95,10 @@ window.onload=function(){
 	var n=true;
 	var timer=setInterval(function(){
 		if(n){
+			oNameSpan.style.MsTransform='scale(1.2,1.2)';
 			oNameSpan.style.WebkitTransform='scale(1.2,1.2)';
 		}else{
+			oNameSpan.style.MsTransform='scale(1,1)';
 			oNameSpan.style.WebkitTransform='scale(1,1)';
 		}
 		n=!n;
@@ -116,12 +122,70 @@ window.onload=function(){
 	var oTeamMin=document.querySelector('.team .min');
 	var i=1;
 	oTeamB.onclick=function(){
-		oTeamMin.style.background='url(team'+i%3+'.png) no-repeat';
+		oTeamMin.style.background='url(images/team'+i%3+'.jpg) no-repeat';
 		oTeamMin.style.backgroundSize='100% 100%';
-		oTeamMax.style.background='url(team'+i%3+'.png) no-repeat';
+		oTeamMax.style.background='url(images/team'+i%3+'.jpg) no-repeat';
 		oTeamMax.style.backgroundSize='100% 100%';
 		i++;
 	}
+	
+	function move(obj,json,optional){
+
+	optional = optional || {};
+	optional.time = optional.time || 300;
+	optional.fn = optional.fn || null;
+	optional.type = optional.type||'ease-out';
+	
+	var start={};
+	var dis={};
+	for(var key in json){
+		start[key]=parseFloat(getStyle(obj,key));
+		dis[key]=json[key]-start[key];
+	}
+	
+	var count=Math.round(optional.time/30);
+	var n=0;
+	
+	clearInterval(obj.timer);
+	obj.timer=setInterval(function(){
+		n++;
+		
+		for(var key in json){
+			
+			switch(optional.type){
+				case 'linear':
+					var cur=start[key]+n*dis[key]/count;
+					break;	
+				case 'ease-in':
+					var a=n/count;
+					var cur=start[key]+dis[key]*(a*a*a);
+					break;	
+				case 'ease-out':
+					var a=1-n/count;
+					var cur=start[key]+dis[key]*(1-a*a*a);
+					break;	
+			}
+			
+			if(key=='opacity'){
+				obj.style.opacity=cur;
+				obj.style.filter='alpha(opacity:'+cur*100+')';
+			}else{
+				obj.style[key]=cur+'px';
+			}
+		}
+		
+			if(n==count){
+				clearInterval(obj.timer);
+				optional.fn  && optional.fn();
+			}
+		},30);
+	}
+
+	function getStyle(obj,attr){
+		return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj,false)[attr];	
+	}
+	
+	console.log('我叫吴春锋，欢迎来到我的个人网站')
 }	
 </script>
 </head>
@@ -134,7 +198,7 @@ window.onload=function(){
 			<li><a href="javascript:;">CSS/Html Show</a></li>
 			<li><a href="javascript:;">Js Show</a></li>
             <li><a href="javascript:;">C3/H5 Show</a></li>
-			<li><a href="https://wwsz.github.io/resume.html" target="_blank">about me</a></li>
+			<li><a href="https://wwsz.github.io/my.html" target="_blank">about me</a></li>
 		</ul>
 	</div>
 </div>
@@ -170,21 +234,21 @@ window.onload=function(){
         <ul>
         	<li>
             	<a href="javascript:;">
-                	<img src="content3.png" />
+                	<img src="images/content3.jpg" />
                     <div></div>
                     <b>css&html 作品</b>
                 </a>
              </li>
              <li>
             	<a href="javascript:;">
-                	<img src="content7.png" />
+                	<img src="images/content5.png" />
                     <div></div>
                     <b>javascript 作品</b>
                 </a>
              </li>
              <li class="active">
             	<a href="javascript:;">
-                	<img src="content8.png" />
+                	<img src="images/content8.jpg" />
                     <div></div>
                     <b>css3&html5 作品</b>
                 </a>
