@@ -5,10 +5,68 @@
 <title>cssShow</title>
 <link rel="icon" type="image/x-icon" href="images/icon2.png" media="screen" />
 <link rel="stylesheet" href="base.css" />
+<style>
+.wrap{width:1366px; background:#00c;height:2500px; }
+.nav{ background:url(images/nav1.jpg) no-repeat;background-size:100% 100%; width:1366px;height:100px; -webkit-transition:1s all ease; z-index:999;-ms-transition:1s all ease;}
+.nav .nav_list{width:100%; position:absolute;left:0;top:30px;height:40px;}
+.nav .nav_list ul{width:100%; position:absolute;left:0;top:0;}
+.nav .nav_list ul li{width:20%; float:left;}
+.nav .nav_list ul li a{display:block; text-align:center;width:100%;  line-height:40px; color:#fff;font-size:18px; font-weight:bold; }
+.nav .nav_list ul li a:hover{ color:#CF0; font-size:26px;}
+.smallbox{width:1366px;height:100px;}
+
+.content{width:1000px; background:#fff;  margin:30px auto; border-radius:50px;}
+.content h2{width:100%;height:60px;font: bold 50px/60px "楷体"; text-align:center; text-shadow:5px 5px 5px #ccc;}
+.content p{width:1000px;height:60px; font: bold 30px/60px "楷体";margin-left:40px; text-shadow:5px 5px 5px #ccc;}
+.content span{display:block; border-top:3px dashed #000; position:relative; margin-bottom:80px;margin-top:80px;}
+.content span i{width:50px;height:50px; background:url(images/jiandao.jpg) no-repeat;  background-size:100% 100%; position:absolute;left:0;top:-27px;}
+
+.content .show1{width:800px; margin:0 auto;}
+.content .show1 b{width:100%; border-bottom:5px solid #000; display:block;margin-bottom:30px;}
+.content .show1 img{width:100%;}
+.content h3{width:1000px;height:60px; font:20px/60px "楷体"; margin-left:40px;}
+</style>
 
 </head>
 
 <body>
-
+<div class="wrap">
+	<div class="nav">
+	<div class="nav_list">
+		<ul class="clearfix">
+			<li><a href="https://wwsz.github.io">Home</a></li>
+			<li><a href="https://wwsz.github.io/cssShow.html" target="_blank">CSS/Html Show</a></li>
+			<li><a href="https://wwsz.github.io/jsShow.html" target="_blank">Js Show</a></li>
+            <li><a href="https://wwsz.github.io/h5Show.html" target="_blank">C3/H5 Show</a></li>
+			<li><a href="https://wwsz.github.io/my.html" target="_blank">about me</a></li>
+		</ul>
+	</div>
+    <div class="smallbox"></div>
+    <div class="content">
+    	<h2>CSS/HTML</h2>
+        <p>一些静态页面</p>
+        <span><i></i></span>
+        <div class="show1">
+        	<p>美丽说首页</p>
+            <b></b>
+            <a href="javascript:;"><img src="images/meilishuo.png" alt=""/></a>
+        </div>
+        <span><i></i></span>
+        <div class="show1">
+        	<p>小米官网首页</p>
+            <b></b>
+            <a href="javascript:;"><img src="images/xiaomi.png" alt=""/></a>
+        </div>
+        <span><i></i></span>
+        <div class="show1">
+        	<p>爱奇艺首页</p>
+            <b></b>
+            <a href="javascript:;"><img src="images/aiqiyi.png" alt=""/></a>
+        </div>
+        <span><i></i></span>
+        <h3>只是简单的写了一下静态的页面，练练手而已。^_^</h3>>
+    </div>
+</div>
+</div>
 </body>
 </html>
