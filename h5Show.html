@@ -4,9 +4,130 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>h5作品</title>
 <link rel="icon" type="image/x-icon" href="images/icon2.png" media="screen" />
-<link rel="stylesheet" href="base.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/h5Show.css" />
+<style>
+.nav{ background:url(images/nav1.jpg) no-repeat;background-size:100% 100%; width:1366px;height:100px; -webkit-transition:1s all ease; z-index:999;-ms-transition:1s all ease;}
+.content .line i{width:50px;height:50px; background:url(images/jiandao.jpg) no-repeat;  background-size:100% 100%; position:absolute;left:0;top:-27px;}
+#box2_div1 div{ background:url(images/c3_1.jpg) no-repeat; background-size:100% 100%; position:absolute; left:0;top:320px; width:200px;height:300px;-webkit-transform:scale(1,-1);-webkit-mask: -webkit-linear-gradient(rgba(0,0,0,0) 50%,rgba(0,0,0,0.9))}
+</style>
+
+<script src="js/h5Show.js"></script>
 </head>
 
 <body>
+<div class="wrap">
+	<div class="nav">
+        <div class="nav_list">
+            <ul class="clearfix">
+                <li><a href="https://wwsz.github.io">Home</a></li>
+                <li><a href="https://wwsz.github.io/cssShow.html" target="_blank">CSS/Html Show</a></li>
+                <li><a href="https://wwsz.github.io/jsShow.html" target="_blank">Js Show</a></li>
+                <li><a href="https://wwsz.github.io/h5Show.html" target="_blank">C3/H5 Show</a></li>
+                <li><a href="https://wwsz.github.io/my.html" target="_blank">about me</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+    	<h2>CC3/HTML5</h2>
+        <h3>&nbsp;&nbsp;CSS3+HTML5布局和简单js效果</h3>
+        <span class="line"><i></i></span>
+        <div class="head">
+            <h3>背景色渐变</h3>
+            <p>可更换背景颜色</p>
+            <b></b>
+        </div>
+        <div class="box1">
+        	<input type="color" value="#ff0000"/>
+            <input type="color" value="#0000ff"/>
+            <div id="box1_box">
+                <div id="box1_div1"></div>
+            </div>
+        </div>
+        
+        <span class="line"><i></i></span>
+        
+        <div class="head">
+            <h3>倒影效果</h3>
+            <p>利用C3样式，达到倒影效果</p>
+            <b></b>
+        </div>
+        <div class="box2">
+        	<div id="box2_div1">
+                <img src="images/c3_1.jpg" alt=""/>
+                <div></div>
+            </div>
+        </div>
+        
+        <span class="line"><i></i></span>
+        
+        <div class="head">
+            <h3>3D盒子</h3>
+            <p>可旋转</p>
+            <b></b>
+        </div>
+        <div class="box3">
+            <div id="box3_div">
+                <div class="front">前</div>
+                <div class="back">后</div>
+                <div class="top">上</div>
+                <div class="bottom">下</div>
+                <div class="left">左</div>
+                <div class="right">右</div>
+            </div>
+        </div>
+        
+        <span class="line"><i></i></span>
+        
+        <div class="head">
+            <h3>3D图片环绕效果</h3>
+            <p>做了个外链接，点击可查看效果</p>
+            <b></b>
+        </div>
+        <div class="box4">
+        	<a href="https://wwsz.github.io/3Dround.html"><img src="images/3Dround.png" alt=""/></a>
+        </div>
+        
+        <div class="head">
+            <h3>CSS3时钟</h3>
+            <p>做了个外链接，点击可查看效果</p>
+            <b></b>
+        </div>
+        <div class="box5">
+        	<a href="https://wwsz.github.io/c3time.html"><img src="images/c3time.png" alt=""/></a>
+        </div>
+        
+        <span class="line"><i></i></span>
+        <div class="head">
+            <h3>CSS3作品展示效果</h3>
+            <p>点击可更换图片，查看效果</p>
+            <b></b>
+        </div>
+        <div class="box6">
+        	<a href="javascript:;" id="prev">上一张</a>
+            <a href="javascript:;" id="next">下一张</a>
+            <ul>
+                <li class="l2"><img src="images/box2_1.jpg"/></li>
+                <li class="l1"><img src="images/box2_2.jpg"/></li>
+                <li class="cur"><img src="images/box2_3.jpg"/></li>
+                <li class="r1"><img src="images/box2_4.jpg"/></li>
+                <li class="r2"><img src="images/box2_5.jpg"/></li>
+                <li><img src="images/box2_6.jpg"/></li>
+            </ul>
+        </div>
+        
+        <span class="line"><i></i></span>
+        <div class="head">
+            <h3>一个简单的手机端页面</h3>
+            <p>用rem布局做的，做了外链，点击查看。</p>
+            <b></b>
+        </div>
+        <div class="box7">
+        	<a href="https://wwsz.github.io/jhs.html"><img src="images/jhs.png" alt=""/></a>
+        </div>
+    </div>
+    <div class="line2"><a href="javascript:;">more about me >>>>></a></div>
+    <a href="javascript:;" id="fix_foot"><img src="images/fixed.gif" alt=""/></a>
+</div>
 </body>
 </html>

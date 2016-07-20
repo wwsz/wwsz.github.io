@@ -1,0 +1,74 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0;padding:0; list-style:none; text-decoration:none;}
+ul{width:300px;height:500px; position:relative; margin:100px auto;}
+ul li{width:100%;height:100%; background:#ccc; font: bold 30px/300px "微软雅黑"; text-align:center; position:absolute;left:0;top:0; -webkit-transition:.5s all ease;}
+ul li img{width:100%;height:100%;}
+.cur{z-index:4;-webkit-transform:perspective(800px) ;opacity:1; background:red;}
+.l1{-webkit-transform:perspective(800px) translateX(-300px)  rotateY(45deg);z-index:3;opacity:1;background:blue; }
+.r1{-webkit-transform:perspective(800px) translateX(300px)  rotateY(-45deg);z-index:3;opacity:1;background:green;}
+.l2{-webkit-transform:perspective(800px) translateX(-350px)  rotateY(45deg);z-index:2; opacity:0;}
+.r2{-webkit-transform:perspective(800px) translateX(350px)  rotateY(-45deg);z-index:2; opacity:0;}
+a{ font: bold 20px "微软雅黑";  float:left; width:100px;height:40px;}
+</style>
+<script>
+window.onload=function(){
+	var oPrev=document.getElementById('prev');
+	var oNext=document.getElementById('next');
+	var aLi=document.getElementsByTagName('li');
+	var arr=[]
+	var bl=false;
+	for(var i=0;i<aLi.length;i++){
+		arr[i]=aLi[i].className	;
+	}
+	oPrev.onclick=function(){
+		if(bl) return;
+		bl=true;
+		var oCur=document.querySelector('.cur');
+		function fn(){
+			oCur.removeEventListener('transitionend',fn,false)	;
+			bl=false;
+		}
+		oCur.addEventListener('transitionend',fn,false)
+		arr.unshift(arr.pop());
+		for(var i=0;i<arr.length;i++){
+			aLi[i].className=arr[i];	
+		}
+			
+	}
+	oNext.onclick=function(){
+		if(bl) return;
+		bl=true;
+		var oCur=document.querySelector('.cur');
+		function fn(){
+			oCur.removeEventListener('transitionend',fn,false)	;
+			bl=false;
+		}
+		oCur.addEventListener('transitionend',fn,false);
+		arr.push(arr.shift());
+		for(var i=0;i<arr.length;i++){
+			aLi[i].className=arr[i];	
+		}		
+	}
+}
+</script>
+</head>
+
+<body>
+<a href="javascript:;" id="prev">上一张</a>
+<a href="javascript:;" id="next">下一张</a>
+<ul>
+	<li class="l2"><img src="images/box2_1.jpg"/></li>
+    <li class="l1"><img src="images/box2_2.jpg"/></li>
+    <li class="cur"><img src="images/box2_3.jpg"/></li>
+    <li class="r1"><img src="images/box2_4.jpg"/></li>
+    <li class="r2"><img src="images/box2_5.jpg"/></li>
+    <li><img src="images/box2_6.jpg"/></li>
+</ul>
+
+</body>
+</html>

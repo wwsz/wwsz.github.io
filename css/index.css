@@ -1,0 +1,56 @@
+
+
+
+.nav .nav_list{width:100%; position:absolute;left:0;bottom:0;height:40px;}
+.nav .nav_list ul{width:100%; position:absolute;left:0;top:0;}
+.nav .nav_list ul li{width:20%; float:left;}
+.nav .nav_list ul li a{display:block; text-align:center;width:100%;  line-height:40px; color:#fff;font-size:18px; font-weight:bold; }
+.nav .nav_list ul li a:hover{ color:#CF0; font-size:26px;}
+.nvaScroll{width:100%;height:365px;-webkit-transition:1s all ease; -ms-transition:1s all ease; background:#000;}
+
+.wrap{width:100%;-webkit-transition:1s all ease;-ms-transition:1s all ease;}
+.head{width:100%;height:500px; position:relative;}
+.head h2{width:100%; font-size:40px; text-align:center;padding-top:100px;color:#9F0; font-weight:bold;padding-bottom:30px; font-family:"楷体";}
+.head .name{width:100%;height:180px; position:relative; }
+.head p{width:100%;text-align:center;color:#000;margin-bottom:10px; font: bold 20px "楷体"}
+.head h3{width:100%; font-size:30px; text-align:center;color:#9F0; font-weight:bold;font-family:"楷体";}
+
+.head i:hover{-webkit-transform:perspective(800px) rotateY(360deg); -ms-transform:perspective(800px) rotateY(360deg);}
+.head i b{width:140px; position:absolute;left:-27px;top:75px; font:bold 25px/30px "楷体";}
+.head .name span{width:180px;height:180px; background:#9F0; position:absolute;left:50%;top:-15px;; font-size:20px; font-weight:bold; text-align:center; line-height:180px; border-radius:50%; margin-left:-100px; cursor:pointer; -webkit-transition:1s all ease; -webkit-transform:scale(1,1);font-family:"楷体"; -ms-transition:1s all ease; -ms-transform:scale(1,1);}
+
+.head .name .name_list{width:0;height:100%; opacity:0;-webkit-transition:1s all ease; background:#0F0;border-radius:50px;-ms-transition:1s all ease;}
+
+.line1{width:90%;height:50px; background:#000;margin-left:5%;}
+
+.content{ position:relative; margin-bottom:100px;}
+.content p{ display:block;width:100%; font: bold 40px/40px "楷体"; color:#000; text-align:center;padding-top:30px;padding-bottom:30px;}
+.content ol{ position:absolute;left:0;top:90px;margin-left:150px;}
+.content ol li{font:bold 20px/50px "楷体";margin:40px;background:#9f0;width:200px; text-align:center; -webkit-transition:.5s all ease;-ms-transition:.5s all ease; box-shadow:inset 0px 0px 10px #fff,0px 5px 5px #000; border-radius:30px; cursor:pointer;}
+.content ol li:hover{ box-shadow:inset 0px 0px 100px #fff,0px 5px 5px #000}
+.content ol li:active{box-shadow:inset 0px 0px 0px #fff,0px 2px 5px #000;}
+.content ul{ width:500px;height:300px;margin-left:450px; position:relative; overflow:hidden;}
+.content ul li {width:500px; height:0px;position:absolute;left:0;top:0;-webkit-transition:.3s all ease;overflow:hidden;}
+.content ul li.active{height:300px;}
+.content ul li a{ display:block;width:100%;height:100%; border-radius:30px;  overflow:hidden; }
+.content ul li a img{ width:100%;height:100%;}
+.content ul li a div{width:100%; background:#000;height:0px; position:absolute;left:0;bottom:0px; border-radius:0 0 30px 30px; opacity:.3; -webkit-transition:.5s all ease;-ms-transition:.5s all ease;}
+.content ul li a b{width:100%; height:0px; position:absolute;left:0;bottom:0px; border-radius:0 0 30px 30px; color: #fff; text-align:center; font: bold 30px/70px "楷体";-webkit-transition:.5s all ease;-ms-transition:.5s all ease;}
+.content ul li a:hover div{height:70px;}
+.content ul li a:hover b{height:70px;}
+
+.team{ position:relative; margin-bottom:100px; text-align:center;width:80%;margin-left:10%;height:600px; }
+.team h2{ display:block;width:100%; font: bold 40px/40px "楷体"; color:#000; text-align:center;padding-top:30px;padding-bottom:30px;}
+.team p{ font:18px "楷体";}
+
+
+.team b{width:80px;height:40px; background:#0F0; color:#fff; position:absolute;left:50px;top:260px; border-radius:20px;font:bold 20px/40px "楷体"; cursor:pointer; box-shadow:inset 0px 0px 10px #fff,0px 10px 5px #000;text-shadow:2px 2px 5px #000;-webkit-transition:.3s all ease;-ms-transition:.3s all ease;}
+.team b:hover{box-shadow:inset 0px 0px 20px #fff,0px 10px 5px #000}
+.team b:active{top:270px;box-shadow:inset 0px 0px 0px #fff,0px 2px 5px #000;text-shadow:0px 0px 0px #000;}
+.team i{width:20px; position:absolute; left:180px;top:180px; color:#0F0; font: bold 18px "楷体";height:0px; -webkit-transition:1s all ease; -ms-transition:1s all ease;}
+
+.line2{width:100%;height:50px; background:#000;color:#fff; text-align:right; font-size:16px; line-height:50px;position:relative; }
+.line2 a{color:#fff; }
+
+#fix_foot{width:100px;height:100px; position:fixed;right:10px;bottom:50px; border-radius:50%; overflow:hidden;}
+#fix_foot img{width:100%;height:100%;}

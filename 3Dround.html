@@ -1,0 +1,83 @@
+<!DOCTYPE HTML >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>3D图片环绕</title>
+<link rel="icon" type="image/x-icon" href="images/icon2.png" media="screen" />
+<style>
+*{margin:0;padding:0; list-style:none;}
+body{ background:#000; overflow:hidden;}
+ul{width:133px;height:200px; margin:200px auto; position:relative; -webkit-transform-style:preserve-3d;
+-webkit-transform: perspective(800px) rotateX(0deg) rotateY(0deg);  }
+li{width:133px;height:200px; position:absolute;left:0;top:0; -webkit-transform: rotateY(0deg) translateZ(0px); overflow:hidden; box-shadow:0 0 20px #fff; border-radius:10px;}
+</style>
+<script>
+window.onload=function(){
+	var aLi=document.getElementsByTagName('li');
+	var oUl=document.querySelector('ul')
+	for(var i=0;i<aLi.length;i++){
+		aLi[i].style.webkitTransition='1s all ease '+(11-i)*100+'ms';
+		aLi[i].style.webkitTransform='rotateY('+(i*360/11)+'deg) translateZ(350px)'	
+	}
+	var x=0;
+	var y=0;
+	
+	var lastY=0;
+	var lastX=0;
+	var iSpeedX=0;
+	var iSpeedY=0;
+	var timer=null;
+	oUl.onmousedown=function(ev){
+		clearInterval(timer)
+		var disX=ev.pageX-y;
+		var disY=ev.pageY-x;
+		document.onmousemove=function(ev){
+			x=ev.pageY-disY;
+			y=ev.pageX-disX;
+			oUl.style.webkitTransform=' perspective(800px) rotateX('+-x/3+'deg) rotateY('+y/3+'deg)'
+			
+			
+			iSpeedX=ev.pageX-lastX;
+			iSpeedY=ev.pageY-lastY;
+			
+			lastX=ev.pageX;
+			lastY=ev.pageY;
+		}
+		document.onmouseup=function(){
+			document.onmousemove=null;
+			document.onmouseup=null;
+			timer=setInterval(function(){
+				iSpeedX*=0.95;
+				iSpeedY*=0.95;
+				x+=iSpeedY;
+				y+=iSpeedX;
+				oUl.style.webkitTransform='perspective(800px) rotateX('+-x/3+'deg) rotateY('+y/3+'deg)'
+				if(Math.abs(iSpeedX)<1) iSpeedX=0;
+				if(Math.abs(iSpeedY)<1) iSpeedY=0;
+				if(iSpeedX==0&&iSpeedY==0){
+					clearInterval(timer)	
+				}
+			},30)	
+		}
+		return false;	
+	}
+}
+</script>
+</head>
+
+<body>
+<ul>
+	<li><img src="images/c3_b4_1.jpg"/></li>
+    <li><img src="images/c3_b4_2.jpg"/></li>
+    <li><img src="images/c3_b4_3.jpg"/></li>
+    <li><img src="images/c3_b4_4.jpg"/></li>
+    <li><img src="images/c3_b4_5.jpg"/></li>
+    <li><img src="images/c3_b4_6.jpg"/></li>
+    <li><img src="images/c3_b4_7.jpg"/></li>
+    <li><img src="images/c3_b4_8.jpg"/></li>
+    <li><img src="images/c3_b4_9.jpg"/></li>
+    <li><img src="images/c3_b4_10.jpg"/></li>
+    <li><img src="images/c3_b4_11.jpg"/></li>
+</ul>
+</body>
+</html>

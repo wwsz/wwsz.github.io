@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+.wrap{width:1366px; background:#00c;}
+
+.nav .nav_list{width:100%; position:absolute;left:0;top:30px;height:40px;}
+.nav .nav_list ul{width:100%; position:absolute;left:0;top:0;}
+.nav .nav_list ul li{width:20%; float:left;}
+.nav .nav_list ul li a{display:block; text-align:center;width:100%;  line-height:40px; color:#fff;font-size:18px; font-weight:bold; }
+.nav .nav_list ul li a:hover{ color:#CF0; font-size:26px;}
+
+.content{width:1000px; background:#fff;  margin:30px auto; border-radius:50px;}
+.content h2{width:100%;height:60px;font: bold 50px/60px "楷体"; text-align:center; text-shadow:5px 5px 5px #ccc;}
+.content h3{width:800px;height:60px; font: bold 30px/60px "楷体"; text-shadow:5px 5px 5px #ccc;}
+.content p{width:800px;height:60px; font: bold 20px/60px "楷体";display:block;}
+.content .line{display:block; border-top:3px dashed #000; position:relative; margin-bottom:80px;margin-top:80px;}
+
+.content .head{width:800px; margin:30px auto;}
+.content b{width:100%; border-bottom:5px solid #000; display:block; margin:30px auto;}
+
+.box1{width:800px;height:400px; margin:20px auto;}
+.box1 #box1_box{width:100px;height:300px; margin: 50px auto; position:relative;  border:1px solid #000; overflow:hidden; border-radius:10px;}
+.box1 #box1_div1{width:500px; height:300px;background:-webkit-repeating-linear-gradient(-45deg,red 0,red 20px,#fff 20px,#fff 40px,blue 40px,blue 60px,#fff 60px,#fff 80px); position:absolute;left:0;top:0;}
+
+.box2{width:800px;height:500px; background:#000;margin:20px auto;}
+#box2_div1{width:200px;height:300px; margin:0 auto; position:relative;padding-top:10px;}
+#box2_div1 img{width:200px;height:300px;}
+
+
+.box3{width:800px;height:400px; margin:20px auto;}
+#box3_div{width:200px; height:200px;  margin:100px auto; position:relative; -webkit-transform-style:preserve-3d; -webkit-transform:perspective(800px) rotateX(0deg) rotateY(0deg); }
+#box3_div div{ width:100%; height:100%; position:absolute;  text-align:center; line-height:200px; font-size:30px;}
+.back{background:rgba(255,0,0,0.5); -webkit-transform:translateZ(-100px);}
+.front{background:rgba(255,0,255,0.5); -webkit-transform:translateZ(100px);}
+.top{background:rgba(0,255,0,0.5); -webkit-transform:translate(0,-100px) rotateX(90deg);}
+.bottom{background:rgba(0,0,255,0.5); -webkit-transform:translate(0,100px) rotateX(-90deg);}
+.left{background:rgba(0,255,255,0.5); -webkit-transform:translate(-100px,0) rotateY(-90deg);}
+.right{background:rgba(255,255,0,0.5); -webkit-transform:translate(100px,0) rotateY(90deg);}
+
+.box4{width:800px; height:500px; margin:20px auto;}
+.box4 img{width:100%;height:100%;}
+
+.box5{width:800px; height:550px; margin:20px auto;}
+.box5 img{width:100%;height:100%;}
+
+.box6{width:1000px;margin:20px auto; height:600px; position:relative;} 
+.box6 ul{width:300px;height:400px; position:relative; margin:100px auto;}
+.box6 ul li{width:100%;height:100%; background:#ccc; font: bold 30px/300px "微软雅黑"; text-align:center; position:absolute;left:0;top:0; -webkit-transition:.5s all ease;}
+.box6 ul li img{width:100%;height:100%;}
+.box6 .cur{z-index:4;-webkit-transform:perspective(800px) ;opacity:1; background:red;}
+.box6 .l1{-webkit-transform:perspective(800px) translateX(-300px)  rotateY(45deg);z-index:3;opacity:1;background:blue; }
+.box6 .r1{-webkit-transform:perspective(800px) translateX(300px)  rotateY(-45deg);z-index:3;opacity:1;background:green;}
+.box6 .l2{-webkit-transform:perspective(800px) translateX(-350px)  rotateY(45deg);z-index:2; opacity:0;}
+.box6 .r2{-webkit-transform:perspective(800px) translateX(350px)  rotateY(-45deg);z-index:2; opacity:0;}
+.box6 #prev{ font: bold 20px "微软雅黑";  float:left; width:100px;height:40px; position:absolute;left:400px;bottom:100px}
+.box6 #next{ font: bold 20px "微软雅黑";  float:left; width:100px;height:40px; position:absolute;left:525px;bottom:100px;}
+
+.box7{width:316px;height:557px; margin:20px auto;}
+.box7 img{width:100%;height:100%;}
+
+
+.line2{width:100%;height:50px; background:#000;color:#fff; text-align:right; font-size:16px; line-height:50px;position:relative; }
+.line2 a{color:#fff; }
+#fix_foot{width:100px;height:100px; position:fixed;right:10px;bottom:50px; border-radius:50%; overflow:hidden;}
+#fix_foot img{width:100%;height:100%;}
+

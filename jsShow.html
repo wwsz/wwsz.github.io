@@ -4,156 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>js作品</title>
 <link rel="icon" type="image/x-icon" href="images/icon2.png" media="screen" />
-<link rel="stylesheet" href="base.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/jsShow.css"/>
 <style>
-.wrap{width:1366px; background:#00c;height:2500px; }
 .nav{ background:url(images/nav1.jpg) no-repeat;background-size:100% 100%; width:1366px;height:100px; -webkit-transition:1s all ease; z-index:999;-ms-transition:1s all ease;}
-.nav .nav_list{width:100%; position:absolute;left:0;top:30px;height:40px;}
-.nav .nav_list ul{width:100%; position:absolute;left:0;top:0;}
-.nav .nav_list ul li{width:20%; float:left;}
-.nav .nav_list ul li a{display:block; text-align:center;width:100%;  line-height:40px; color:#fff;font-size:18px; font-weight:bold; }
-.nav .nav_list ul li a:hover{ color:#CF0; font-size:26px;}
-
-.content{width:1000px; background:#fff;  margin:30px auto; border-radius:50px;}
-.content h2{width:100%;height:60px;font: bold 50px/60px "楷体"; text-align:center; text-shadow:5px 5px 5px #ccc;}
-.content h3{width:800px;height:60px; font: bold 30px/60px "楷体"; text-shadow:5px 5px 5px #ccc;}
-.content p{width:800px;height:60px; font: bold 20px/60px "楷体";display:block;}
-.content span{display:block; border-top:3px dashed #000; position:relative; margin-bottom:80px;margin-top:80px;}
-.content span i{width:50px;height:50px; background:url(images/jiandao.jpg) no-repeat;  background-size:100% 100%; position:absolute;left:0;top:-27px;}
-.content .head{width:800px; margin:30px auto;}
-.content b{width:100%; border-bottom:5px solid #000; display:block; margin:30px auto;}
-
-
-
-
-.box1{width:670px;height:240px;margin:20px auto; position:relative; overflow:hidden;}
-.box1 #num{ position:absolute;z-index:2;right:10px;bottom:10px;}
-.box1 #num li{float:left; width:20px;height:20px; background:#ccc;color:#fff;text-align:center;line-height:20px; border-radius:50%; margin-right:10px;}
-.box1 #num li.active{ background:red;}
-.box1 #img{ position:absolute;left:-670px;top:0;width:5360px;height:240px;}
-.box1 #img li{ width:670px;height:240px; float:left;}
-.box1 #img li img{width:100%;height:100%;}
-.box1 #left{ position:absolute;left:0;top:100px; background:#ccc; color:#000; width:40px;height:40px; text-align:center;font:20px/40px "楷体";display:none; cursor:pointer;}
-.box1 #right{ position:absolute;right:0;top:100px; background:#ccc; color:#000; width:40px;height:40px; text-align:center;font:20px/40px "楷体";display:none;cursor:pointer;}
-.box1:hover #left{display:block;}
-.box1:hover #right{display:block;}
-
-
+.content .line i{width:50px;height:50px; background:url(images/jiandao.jpg) no-repeat;  background-size:100% 100%; position:absolute;left:0;top:-27px;}
 </style>
-<script>
-window.onload=function(){
-	var oUl1=document.getElementById('num');
-	var aLi1=oUl1.getElementsByTagName('li');
-	var oUl2=document.getElementById('img');
-	var oLeft=document.getElementById('left');
-	var oRight=document.getElementById('right');
-	var n=0;
-	var m=0;
-	for(var i=0;i<aLi1.length;i++){
-		(function(index){
-			aLi1[i].onmouseover=function(){
-				for(var i=0;i<aLi1.length;i++){
-					aLi1[i].className='';
-				}
-				this.className='active';
-				move(oUl2,{left:-670*(index+1)},{time:300});
-				n=index;
-				m=index;
-			}		
-		})(i)
-	}	
-	oRight.onclick=function(){
-		n++;
-		m++
-		if(n==6) n=0;
-		
-		for(var i=0;i<aLi1.length;i++){
-			aLi1[i].className='';
-		}
-		aLi1[n].className='active';
-		move(oUl2,{left:-670*(m+1)},{time:300})
-		if(m==6){
-			setTimeout(function(){oUl2.style.left="-670px";},301)
-			m=0;
-		};
-		
-	}
-	oLeft.onclick=function(){
-		n--;
-		m--
-		if(n<0) n=5;
-		
-		for(var i=0;i<aLi1.length;i++){
-			aLi1[i].className='';
-		}
-		aLi1[n].className='active';
-		move(oUl2,{left:-670*(m+1)},{time:300})
-		if(m==-1){
-			setTimeout(function(){oUl2.style.left="-4020px";},301)
-			m=5;
-		};
-		
-	}
-
-
-	function move(obj,json,optional){
-
-		optional = optional || {};
-		optional.time = optional.time || 300;
-		optional.fn = optional.fn || null;
-		optional.type = optional.type||'ease-out';
-		
-		var start={};
-		var dis={};
-		for(var key in json){
-			start[key]=parseFloat(getStyle(obj,key));
-			dis[key]=json[key]-start[key];
-		}
-		
-		var count=Math.round(optional.time/30);
-		var n=0;
-		
-		clearInterval(obj.timer);
-		obj.timer=setInterval(function(){
-			n++;
-			
-			for(var key in json){
-				
-				switch(optional.type){
-					case 'linear':
-						var cur=start[key]+n*dis[key]/count;
-						break;	
-					case 'ease-in':
-						var a=n/count;
-						var cur=start[key]+dis[key]*(a*a*a);
-						break;	
-					case 'ease-out':
-						var a=1-n/count;
-						var cur=start[key]+dis[key]*(1-a*a*a);
-						break;	
-				}
-				
-				if(key=='opacity'){
-					obj.style.opacity=cur;
-					obj.style.filter='alpha(opacity:'+cur*100+')';
-				}else{
-					obj.style[key]=cur+'px';
-				}
-			}
-			
-				if(n==count){
-					clearInterval(obj.timer);
-					optional.fn  && optional.fn();
-				}
-			},30);
-		}
-	
-		function getStyle(obj,attr){
-			return obj.currentStyle?obj.currentStyle[attr]:getComputedStyle(obj,false)[attr];	
-		}
-		
-}
-</script>
+<script src="js/jsShow.js"></script>
 
 </head>
 
@@ -173,10 +30,10 @@ window.onload=function(){
     <div class="content">
     	<h2>Javascript</h2>
         <h3>&nbsp;&nbsp;原生javascript的应用</h3>
-        <span><i></i></span>
+        <span class="line"><i></i></span>
         <div class="head">
             <h3>京东banner选项卡</h3>
-            <p>这里只是做了个简单的划入数字改变图片的效果</p>
+            <p>这里只是做了个简单的无缝连接效果，点击切换图片</p>
             <b></b>
         </div>
         <div class="box1 clearfix">
@@ -201,13 +58,45 @@ window.onload=function(){
             <em id="left">&lt;</em>
             <em id="right">&gt;</em>
         </div>
-        <span><i></i></span>
+        <span class="line"><i></i></span>
         <div class="head">
-            <h3>京东banner选项卡</h3>
-            <p>这里只是做了个简单的无缝链接效果</p>
+            <h3>作品展示效果</h3>
+            <p>左右拉动图片改变了图片大小</p>
             <b></b>
         </div>
+        <div class="box2">
+            	<div id="div1">
+                    <ul>
+                        <li><img src="images/box2_1.jpg"></li>
+                        <li><img src="images/box2_2.jpg"></li>
+                        <li><img src="images/box2_3.jpg"></li>
+                        <li><img src="images/box2_4.jpg"></li>
+                        <li><img src="images/box2_5.jpg"></li>
+                        <li><img src="images/box2_6.jpg"></li>
+                    </ul>
+                </div>
+        </div>
+        <span class="line"><i></i></span>
+        <div class="head">
+            <h3>app应用换位效果</h3>
+            <p>点击可移动应用，并改变位置</p>
+            <b></b>
+        </div>
+        <div class="box3">
+        	<ul id="box3_ul">
+                <li><img src="images/box3_1.png"/></li>
+                <li><img src="images/box3_2.png"/></li>
+                <li><img src="images/box3_3.png"/></li>
+                <li><img src="images/box3_4.png"/></li>
+                <li><img src="images/box3_5.png"/></li>
+                <li><img src="images/box3_6.png"/></li>
+                <li><img src="images/box3_7.png"/></li>
+                <li><img src="images/box3_8.png"/></li>
+            </ul>
+        </div>
     </div>
+    <div class="line2"><a href="javascript:;">more about me >>>>></a></div>
+    <a href="javascript:;" id="fix_foot"><img src="images/fixed.gif" alt=""/></a>
 </div>
 </body>
 </html>
