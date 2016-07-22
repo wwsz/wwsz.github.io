@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-.wrap{width:100%; background:#00c;margin:0 auto;}
+.wrap{width:100%; background:#00c;margin:0 auto;overflow:hidden;}
 
 .nav .nav_list{width:100%; position:absolute;left:0;top:30px;height:40px;}
 .nav .nav_list ul{width:100%; position:absolute;left:0;top:0;}
@@ -9,7 +9,7 @@
 .nav .nav_list ul li a{display:block; text-align:center;width:100%;  line-height:40px; color:#fff;font-size:18px; font-weight:bold; }
 .nav .nav_list ul li a:hover{ color:#CF0; font-size:26px;}
 
-.content{width:1000px; background:#fff;  margin:30px auto; border-radius:50px;}
+.content{width:960px; background:#fff;  margin:30px auto; border-radius:50px;}
 .content h2{width:100%;height:60px;font: bold 50px/60px "楷体"; text-align:center; text-shadow:5px 5px 5px #ccc;}
 .content h3{width:800px;height:60px; font: bold 30px/60px "楷体"; text-shadow:5px 5px 5px #ccc;}
 .content p{width:800px;height:60px; font: bold 20px/60px "楷体";display:block;}
@@ -41,7 +41,7 @@
 .box2 #div1 ul li span{ position:absolute;left:50%;top:50%; background:#fff; font-size:30px;}
 
 .box3{width:800px;margin:20px auto;height:450px;}
-.box3 ul{width:800px;}
+.box3 ul{width:800px;margin:20px auto;}
 .box3 li{width:128px;height:128px;float:left;margin:20px; border:10px solid black; background:#fff;}
 
 
